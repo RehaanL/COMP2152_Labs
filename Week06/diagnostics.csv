@@ -1,0 +1,5 @@
+2026-02-17 13:43:14,ifconfig,en0,ce:a8:17:39:c4:be / 10.4.128.31,Captured
+2026-02-17 13:51:53,ping,google.com,3.858,Success
+2026-02-17 13:51:59,nslookup,google.com,142.250.137.102,Success
+2026-02-17 13:52:04,ifconfig,en0,ce:a8:17:39:c4:be / 10.4.128.31,Captured
+2026-02-17 13:52:10,arp,local,5 devices,Captured
