@@ -25,9 +25,9 @@ def load_findings(filename):
 def bar_chart(data, title, max_width=30):
     print(f"{title}")
     max_value = max(count for _, count in data)
-    for (label, count) in data:
-        bar_length = int(count / max_value) * max_width
-        print(f"{label:<15} {' ' * bar_length} {count}")
+    for label, count in data:
+        bar_length = int((count / max_value) * max_width)
+        print(f"    {label:<15} {'█' * bar_length} {count}")
 
 
 
@@ -36,7 +36,15 @@ def bar_chart(data, title, max_width=30):
 #   Return as a list of (severity, count) tuples
 #   Order: HIGH first, then MEDIUM, then LOW
 def severity_summary(findings):
+    count = {}
     for f in findings:
+        severity = f["severity"]
+        count[severity] = count.get(severity, 0) + 1
+    order = ["HIGH", "MEDIUM", "LOW"]
+    return [(severity, count.get(severity, 0)) for severity in order if severity in count]
+
+
+
 
 
 
@@ -45,7 +53,11 @@ def severity_summary(findings):
 #   Count findings per date (use the "date" field)
 #   Return as a list of (date, count) tuples, sorted by date ascending
 def timeline(findings):
-    pass
+    count = {}
+    for f in findings:
+        date = f["date"]
+        count[date] = count.get(date, 0) + 1
+    return sorted(count.items())
 
 
 # --- Main (provided) ---
