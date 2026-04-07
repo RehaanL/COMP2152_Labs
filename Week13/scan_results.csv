@@ -1,0 +1,13 @@
+subdomain,type,severity,date
+ssh.0x10.cloud,default_creds,HIGH,2026-03-10
+blog.0x10.cloud,no_https,LOW,2026-03-10
+api.0x10.cloud,missing_header,LOW,2026-03-10
+ftp.0x10.cloud,default_creds,HIGH,2026-03-10
+cdn.0x10.cloud,missing_header,LOW,2026-03-10
+db.0x10.cloud,open_port,HIGH,2026-03-11
+api.0x10.cloud,open_port,MEDIUM,2026-03-11
+blog.0x10.cloud,exposed_file,MEDIUM,2026-03-11
+admin.0x10.cloud,exposed_file,HIGH,2026-03-12
+ssh.0x10.cloud,open_port,MEDIUM,2026-03-12
+dev.0x10.cloud,missing_header,LOW,2026-03-12
+login.0x10.cloud,default_creds,LOW,2026-03-12
